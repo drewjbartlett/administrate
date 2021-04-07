@@ -52,7 +52,17 @@ It renders the `_table` partial to display details about the resources.
   </div>
 </header>
 
+
 <section class="main-content__body main-content__body--flush">
+  <div class="row mx-0">
+    <div class="col-12">
+      <p class="mb-0 text-right">
+        <span class="text-primary"><%= number_with_delimiter(resources.total_count) %></span>
+        <small><%= resource_name.to_s.humanize %> Found.</small>
+      </p>
+    </div>
+  </div>
+
   <%= render(
     "collection",
     collection_presenter: page,

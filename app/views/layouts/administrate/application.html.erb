@@ -25,23 +25,22 @@ By default, it renders:
   <%= csrf_meta_tags %>
   <%= csp_meta_tag if defined?(csp_meta_tag) %>
 </head>
-<body>
+<body class="pb-5">
   <%= render 'navbar' %>
 
   <%= render "icons" %>
   <div class="container-fluid">
     <div class="row mx-0 mt-5">
-    <div class="d-sm-none d-md-block col-md-3">
-      <%= render "navigation" -%>
+      <div class="d-sm-none d-md-block col-md-3">
+        <%= render "navigation" -%>
+      </div>
+      <div class="col-sm-12 col-md-9">
+        <main role="main" class="bg-white rounded shadow-sm">
+          <%= render "flashes" -%>
+          <%= yield %>
+        </main>
+      </div>
     </div>
-    <div class="col-sm-12 col-md-9">
-      <main role="main" class="bg-white rounded shadow-sm">
-        <%= render "flashes" -%>
-        <%= yield %>
-      </main>
-    </div>
-  </div>
-
   </div>
 
   <%= render "javascript" %>
