@@ -1,4 +1,5 @@
 require "administrate/engine"
+require 'administrate/configuration'
 
 module Administrate
   def self.warn_of_missing_resource_class
@@ -19,5 +20,17 @@ module Administrate
       "https://github.com/thoughtbot/administrate/issues " +
       "if you think otherwise.",
     )
+  end
+
+  def self.configuration
+    @configuration ||= Configuration.new
+  end
+
+  def self.reset
+    @configuration = Configuration.new
+  end
+
+  def self.configure
+    yield(configuration)
   end
 end

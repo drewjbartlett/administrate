@@ -26,15 +26,22 @@ By default, it renders:
   <%= csp_meta_tag if defined?(csp_meta_tag) %>
 </head>
 <body>
+  <%= render 'navbar' %>
+
   <%= render "icons" %>
+  <div class="container-fluid">
+    <div class="row mx-0 mt-5">
+    <div class="d-sm-none d-md-block col-md-3">
+      <%= render "navigation" -%>
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <main role="main" class="bg-white rounded shadow-sm">
+        <%= render "flashes" -%>
+        <%= yield %>
+      </main>
+    </div>
+  </div>
 
-  <div class="app-container">
-    <%= render "navigation" -%>
-
-    <main class="main-content" role="main">
-      <%= render "flashes" -%>
-      <%= yield %>
-    </main>
   </div>
 
   <%= render "javascript" %>

@@ -11,6 +11,7 @@ gem "pg"
 gem "redcarpet"
 gem "sentry-raven"
 gem "unicorn"
+gem "bootstrap", "4.6.0"
 
 group :development, :test do
   gem "appraisal"

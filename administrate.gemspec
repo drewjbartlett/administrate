@@ -23,7 +23,9 @@ Gem::Specification.new do |s|
   s.add_dependency "kaminari", ">= 1.0"
   s.add_dependency "momentjs-rails", "~> 2.8"
   s.add_dependency "sassc-rails", "~> 2.1"
+  s.add_dependency "sass-rails", ">= 6"
   s.add_dependency "selectize-rails", "~> 0.6"
+  s.add_dependency "bootstrap", '4.6.0'
 
   s.add_development_dependency "rspec-rails"
 
