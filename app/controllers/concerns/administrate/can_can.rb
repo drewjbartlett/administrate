@@ -7,7 +7,7 @@ module Administrate
         load_and_authorize_resource
 
         rescue_from ::CanCan::AccessDenied do |exception|
-          flash[:notice] = "Access Denied"
+          flash[:alert] = "Access Denied"
           redirect_to root_path
         end
 
