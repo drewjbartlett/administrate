@@ -1,12 +1,14 @@
 module Administrate
   module CanCan
+    include DeviseHelper
+
     if Object.const_defined?("CanCan")
       extend ActiveSupport::Concern
 
       included do
         load_and_authorize_resource
 
-        rescue_from ::CanCan::AccessDenied do |exception|
+        rescue_from ::CanCan::AccessDenied do |_exception|
           flash[:alert] = "Access Denied"
           redirect_to root_path
         end
