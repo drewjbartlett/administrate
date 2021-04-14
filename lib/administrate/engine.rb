@@ -1,6 +1,7 @@
 require "datetime_picker_rails"
 require "jquery-rails"
 require "kaminari"
+require "bootstrap"
 require "momentjs-rails"
 require "sassc-rails"
 require "selectize-rails"
