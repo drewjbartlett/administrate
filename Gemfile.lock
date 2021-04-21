@@ -7,7 +7,7 @@ PATH
       activerecord (>= 5.0)
       bootstrap (= 4.6.0)
       datetime_picker_rails (~> 0.0.7)
-      jquery-rails (>= 4.0)
+      jquery-rails (>= 4.4)
       kaminari (>= 1.0)
       momentjs-rails (~> 2.8)
       sass-rails (>= 6)
@@ -333,7 +333,6 @@ DEPENDENCIES
   ammeter
   appraisal
   awesome_print
-  bootstrap (= 4.6.0)
   bundler-audit
   byebug
   capybara (= 3.35.3)
