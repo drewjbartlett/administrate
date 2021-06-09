@@ -47,7 +47,7 @@ module Administrate
 
       if resource.save
         redirect_to(
-          [namespace, resource],
+          [namespace.to_sym, resource],
           notice: translate_with_resource("create.success"),
         )
       else
@@ -60,7 +60,7 @@ module Administrate
     def update
       if requested_resource.update(resource_params)
         redirect_to(
-          [namespace, requested_resource],
+          [namespace.to_sym, requested_resource],
           notice: translate_with_resource("update.success"),
         )
       else

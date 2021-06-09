@@ -20,7 +20,7 @@ All show page attributes of has_one relationship would be rendered
     <legend>
       <%= link_to(
         field.display_associated_resource,
-        [namespace, field.data],
+        [namespace.to_sym, field.data],
       ) %>
     </legend>
     <% field.nested_show.attributes.each do |attribute| -%>
