@@ -27,7 +27,7 @@ as well as a link to its edit page.
     <%= link_to(
       t("administrate.actions.edit_resource", name: page.page_title),
       [:edit, namespace.to_sym, page.resource],
-      class: "button btn btn-primary",
+      class: "button",
     ) if valid_action?(:edit) && show_action?(:edit, page.resource) %>
   </div>
 </header>
