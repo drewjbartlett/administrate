@@ -11,6 +11,8 @@ as defined by the routes in the `admin/` namespace
   <p class="text-muted">MENU</p>
 
   <% Administrate::Namespace.new(namespace).resources_with_index_route.each do |resource| %>
+    <% next if resource.include? "/" %>
+
     <%= link_to(
       display_resource_name(resource),
       resource_index_route(resource),
