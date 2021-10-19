@@ -140,13 +140,7 @@ GEM
     faraday (1.3.0)
       faraday-net_http (~> 1.0)
       multipart-post (>= 1.2, < 3)
-<<<<<<< HEAD
     ffi (1.15.1)
-=======
-      ruby2_keywords
-    faraday-net_http (1.0.1)
-    ffi (1.15.0)
->>>>>>> b3bb0a3b7833deceff71cfe1687ac36cec12a6e8
     formulaic (0.4.1)
       activesupport
       capybara
